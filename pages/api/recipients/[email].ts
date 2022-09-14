@@ -6,6 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     switch(method) {
         case 'GET':
             try{
+                console.log("email open")
                 const { EmailTracking } = await connect()
                 const date_ob = new Date().toISOString().slice(0, 19).replace('T', ' ');
                 EmailTracking.updateOne({email}, {opened: true, lastseen: date_ob})
