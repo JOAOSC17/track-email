@@ -7,4 +7,4 @@ export const transporter = nodemailer.createTransport({
     }
 });
 
-export const Server = 'any_url'
+export const Server = 'https://track-email-kv6xlwge1-joaosc17.vercel.app/'
